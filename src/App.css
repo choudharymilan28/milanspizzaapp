@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App .order-form,
+.App .PizzaStages,
+.App .MainSection {
+  margin: 20px auto;
+}
+
+
+.order-form form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.order-form form div label {
+  margin: 6px;
+}
+
+
+.MainSection {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.MainSection table {
+  width: 100%;
+}
+
+.MainSection table button {
+  cursor: pointer;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px;
+}
+
+.totalOrdersDelivered {
+  font-weight: bold;
+}
+
+
+.StagesBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.StagesBox > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  /* margin: auto 4px; */
+  padding: 6px;
+  height: 70vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.StagesBox > div .cards {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 6px 0;
+  padding: 5px;
+  width: 80%;
+}
+
+.StagesBox > div .cards button {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.StagesBox > div .cards button:hover {
+  transform: translate(0, -2px);
+}
+
+.StagesBox > div .cards.time-warning {
+  background-color: red;
+  color: #fff;
+}
+
+/* Style ScrollBar */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.StagesBox > div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.StagesBox > div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
